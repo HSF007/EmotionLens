@@ -1,0 +1,15 @@
+dvc
+dvc[gdrive]
+tensorflow
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+mlflow
+fastapi
+uvicorn
+python-multipart
+prometheus-client
+pillow
+aiofiles

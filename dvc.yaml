@@ -1,0 +1,40 @@
+stages:
+  preprocess:
+    cmd: python src/data_preprocessing.py
+    deps:
+      - data/raw
+      - src/data_preprocessing.py
+    params:
+      - preprocessing
+    outs:
+      - data/processed
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - data/processed
+      - src/train.py
+      - src/model.py
+    params:
+      - training
+    outs:
+      - models/model.h5
+    metrics:
+      - metrics/train_metrics.json:
+          cache: false
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - data/processed
+      - models/model.h5
+      - src/evaluate.py
+    metrics:
+      - metrics/evaluation_metrics.json:
+          cache: false
+
+  deploy_best:
+    cmd: python src/temp.py
+    deps:
+      - models/model.h5
+      - metrics/evaluation_metrics.json

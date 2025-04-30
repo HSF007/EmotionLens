@@ -1,0 +1,14 @@
+preprocessing:
+  image_size: 48
+  batch_size: 32
+  validation_split: 0.2
+
+training:
+  epochs: 10
+  learning_rate: 0.001
+  batch_size: 32
+  dropout_rate: 0.3
+  num_classes: 7
+
+evaluation:
+  batch_size: 32
