@@ -1,0 +1,9 @@
+models/best_model
+__pycache__
+*.pyc
+.vscode
+.idea
+venv
+.env
+logs
+metrics
