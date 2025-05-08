@@ -20,6 +20,6 @@ echo "5. Starting the application..."
 docker-compose up -d
 
 echo "Setup complete! You can access:"
-echo "- EmotionLens API: http://localhost:8000"
+echo "- EmotionLens API: http://localhost:8000/static/index.html"
 echo "- Prometheus: http://localhost:9090"
 echo "- Grafana: http://localhost:3000 (admin/admin)"
